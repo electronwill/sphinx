@@ -12,5 +12,4 @@ before_install:
   - source activate build-environment
 
 script:
-  - make html-errors
-  - ../update-gh-pages.sh
+  - make html
