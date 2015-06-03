@@ -6,7 +6,9 @@
 Sphinx repository
 =================
 
-Continuum Analytics notes and examples for Sphinx, TravisCI, GitHub, and our documentation system.
+Welcome to the Continuum Analytics notes and examples for Sphinx, TravisCI, GitHub, and our documentation system!
+
+Instead of using the table of contents below, please start by going directly to the :doc:`directory/sphinx`.
 
 
 Intro
