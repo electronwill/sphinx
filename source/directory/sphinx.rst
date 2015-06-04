@@ -396,7 +396,7 @@ The ref and doc directives for references and documents:
 
   Or with absolute pathname: :doc:`/directory/two`
   
-  References are similar to anchor links such as `file.html#section-one` and documents 
+  References are similar to anchor links such as ``file.html#section-one`` and documents 
   are just links to other files.
 
 This text refers to :ref:`my-reference-label` ahead.
@@ -421,7 +421,7 @@ The link caption defaults to the document title if no other title is given: :doc
 
 Or with absolute pathname: :doc:`/directory/two`
 
-References are similar to anchor links such as `file.html#section-one` and documents 
+References are similar to anchor links such as ``file.html#section-one`` and documents 
 are just links to other files.
 
 Path names
