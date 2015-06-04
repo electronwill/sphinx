@@ -395,6 +395,9 @@ The ref and doc directives for references and documents:
   The link caption defaults to the document title if no other title is given: :doc:`two`
 
   Or with absolute pathname: :doc:`/directory/two`
+  
+  References are similar to anchor links such as `file.html#section-one` and documents 
+  are just links to other files.
 
 This text refers to :ref:`my-reference-label` ahead.
 
@@ -417,6 +420,9 @@ Sphinx supports automatic cross references to :doc:`another document<two>` in th
 The link caption defaults to the document title if no other title is given: :doc:`two`
 
 Or with absolute pathname: :doc:`/directory/two`
+
+References are similar to anchor links such as `file.html#section-one` and documents 
+are just links to other files.
 
 Path names
 ----------
