@@ -1,20 +1,28 @@
-============
+############
 Document Two
-============
+############
 
-.. contents::
+.. contents:: Table of Contents
+   :depth: 2
 
-First
-=====
+***********
+Chapter One
+***********
 
-Here is document two!
+==========
+Header One
+==========
 
-Second
-======
+Header Two
+==========
 
-Second section.
+Header Three
+------------
 
-Third
-=====
+Header Four
+^^^^^^^^^^^
 
-Third section.
+Header Five
+"""""""""""
+
+Text.

@@ -11,16 +11,16 @@ Welcome to the Continuum Analytics notes and examples for Sphinx, TravisCI, GitH
 Instead of using the table of contents below, please start by going directly to the :doc:`directory/sphinx`.
 
 
-Intro
------
+First Section
+-------------
 
-Intro goes here.
+First text.
 
 
-Getting Started
----------------
+Second Section
+--------------
 
-How to get started.
+Second text.
 
 
 First Set of Documents
@@ -31,6 +31,7 @@ First Set of Documents
 
    dummya
    dummyb
+   guest
 
 
 Second Set

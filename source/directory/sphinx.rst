@@ -1,33 +1,14 @@
-.. contents:: Table of Contents
-   :depth: 2
-
-########################
 Main Sphinx Example File
-########################
+========================
 
-***********
-Chapter One
-***********
+.. contents::
 
-==========
-Header One
-==========
-
-Header Two
-==========
-
-Header Three
-------------
-
-Header Four
-^^^^^^^^^^^
-
-Header Five
-"""""""""""
 
 Welcome! This Sphinx reference file shows ReStructured Text (rst) code followed
 by its html output.
 
+Basic formatting
+----------------
 
 .. code-block:: rst
 
@@ -166,6 +147,11 @@ Here is another left justified paragraph.
 
 Now out of the comment.
 
+Code blocks
+-----------
+
+rst
+^^^
 
 Next we'll show how we're displaying these blocks of rst code:
 
@@ -182,9 +168,8 @@ Next we'll show how we're displaying these blocks of rst code:
   This is a paragraph split across
   two lines.
 
-
 HTML
-====
+^^^^
 
 .. code-block:: rst
 
@@ -205,7 +190,7 @@ HTML
 
 
 YAML
-====
+^^^^
 
 .. code-block:: rst
 
@@ -224,7 +209,7 @@ YAML
 
 
 bash
-====
+^^^^
 
 .. code-block:: rst
 
@@ -242,7 +227,7 @@ bash
 
 
 python
-======
+^^^^^^
 
 .. code-block:: rst
 
@@ -256,6 +241,9 @@ python
   for i in range(10):
     print(i)
 
+
+none
+^^^^
 
 If no other type applies, use "none". It can be useful for 
 obscure languages or mixtures of languages like this mix of
@@ -279,7 +267,7 @@ bash and python.
 
 
 Tables
-======
+------
 
 Grid table with header:
 
@@ -358,7 +346,7 @@ True   True   True
 =====  =====  =======
 
 Links
-=====
+-----
 
 .. code-block:: rst
 
@@ -380,18 +368,18 @@ This paragraph links to `the yahoo site`_.
 
 
 Directives
-==========
+----------
 
 The ref and doc directives for references and documents:
 
 .. code-block:: rst
 
-  This text refers to a :ref:`my-reference-label` section ahead.
+  This text refers to :ref:`my-reference-label` ahead.
 
   .. _my-reference-label:
 
-  Section to cross-reference
-  --------------------------
+  Section Alpha
+  -------------
 
   This is the text of the section.
 
@@ -399,8 +387,8 @@ The ref and doc directives for references and documents:
 
   .. _label-two:
 
-  Section for other cross reference
-  ---------------------------------
+  Section Bravo
+  -------------
 
   Sphinx supports automatic cross references to :doc:`a document called two<two>` in the same archive.
 
@@ -408,12 +396,12 @@ The ref and doc directives for references and documents:
 
   Or with absolute pathname: :doc:`/directory/two`
 
-This text refers to a :ref:`my-reference-label` section ahead.
+This text refers to :ref:`my-reference-label` ahead.
 
 .. _my-reference-label:
 
-Section to cross-reference
---------------------------
+Section Alpha
+-------------
 
 This is the text of the section.
 
@@ -421,113 +409,105 @@ Here is a :ref:`link to another section<label-two>` up ahead.
 
 .. _label-two:
 
-Section for other cross reference
----------------------------------
+Section Bravo
+-------------
 
-Sphinx supports automatic cross references to :doc:`a document called two<two>` in the same archive.
+Sphinx supports automatic cross references to :doc:`another document<two>` in the same archive.
 
 The link caption defaults to the document title if no other title is given: :doc:`two`
 
 Or with absolute pathname: :doc:`/directory/two`
 
+Path names
+----------
+
+A document at the path ``/sketches/index`` could refer to the document ``/people`` by 
+absolute name as ``:doc:`/people``` or by relative name as ``:doc:`../people``` and 
+could refer to ``/sketches/parrot`` by absolute name as ``:doc:`/sketches/parrot``` or 
+by relative name as ``:doc:`parrot```.
 
 Headers
-=======
+-------
 
 Usually # signs over and under a title are only ever used to indicate Part One, 
-Part Two, and so on in a book, and * signs over and under a title only for chapters
-in a book. This example shows those, and typical headers from one to five, although
-it's rare to use more than the third header size.
+Part Two, and so on in a book, and * signs over and under a title only for chapters 
+in a book. This is the complete code of :doc:`two`, which shows those, and typical 
+headers from one to five, although it's rare to use more than the third header size.
 
 .. code-block:: rst
 
-  ########
-  Part One
-  ########
-
-  ***********
-  Chapter One
-  ***********
-
-  ==========
-  Header One
-  ==========
-
-  Header Two
-  ==========
-
-  Header Three
-  ------------
-
-  Header Four
-  ^^^^^^^^^^^
-
-  Header Five
-  """""""""""
-
-Examine the headers at the top of this file. This is their code:
-
-.. code-block:: rst
-
-  ########################
-  Main Sphinx Example File
-  ########################
-
-  ***********
-  Chapter One
-  ***********
-
-  ==========
-  Header One
-  ==========
-
-  Header Two
-  ==========
-
-  Header Three
-  ------------
-
-  Header Four
-  ^^^^^^^^^^^
-
-  Header Five
-  """""""""""
-
-Much more typical in our documentation are the headers in the file :doc:`two`.
-This is the entire rst source code for that file:
-
-.. code-block:: rst
-
-  ============
+  ############
   Document Two
-  ============
+  ############
+
+  .. contents:: Table of Contents
+     :depth: 2
+
+  ***********
+  Chapter One
+  ***********
+
+  ==========
+  Header One
+  ==========
+
+  Header Two
+  ==========
+
+  Header Three
+  ------------
+
+  Header Four
+  ^^^^^^^^^^^
+
+  Header Five
+  """""""""""
+
+  Text.
+
+Much more typical in our documentation are the headers in this file. Here are its 
+first few lines:
+
+.. code-block:: rst
+
+  Main Sphinx Example File
+  ========================
 
   .. contents::
 
-  First
-  =====
 
-  Here is document two!
+  Welcome! This Sphinx reference file shows ReStructured Text (rst) code followed
+  by its html output.
 
-  Second
-  ======
+  Basic formatting
+  ----------------
 
-  Second section.
+  .. code-block:: rst
 
-  Third
-  =====
+    Paragraphs that spread across
+    multiple lines in the source file
+    will display on one line in the
+    built html file.
+    
+    The source file uses two line breaks
+    to indicate a paragraph break.
 
-  Third section.
-  
-Please go look briefly at :doc:`two` to see how those display, then come back here.
+  Paragraphs that spread across
+  multiple lines in the source file
+  will display on one line in the
+  built html file.
+
+  The source file uses two line breaks
+  to indicate a paragraph break.
 
 Table of contents
-=================
+-----------------
 
-Now please look at the ``.. contents::`` in the code above, go look again at 
-:doc:`two` to see how that displays, and then return here.
+As you can see above, this file uses simply ``.. contents::`` for its table of contents. 
+Please go look at the table of contents at the top of the file to see how that displays, 
+then return here.
 
-The table of contents in this file is:
+:doc:`two` uses this table of contents:
 
 .. code-block:: rst
 
@@ -536,19 +516,11 @@ The table of contents in this file is:
 
 The title "Table of Contents" overrides the default title "Contents". The depth 
 option specifies that only the two top levels of headers should be displayed
-in the table of contents. Please look back up to the top to see how that displays, 
+in the table of contents. Please look at :doc:`two` to see how that displays, 
 then return here.
 
-Path names
-==========
-
-A document at the path ``/sketches/index`` could refer to the document ``/people`` by 
-absolute name as ``:doc:`/people``` or by relative name as ``:doc:`../people``` and 
-could refer to ``/sketches/parrot`` by absolute name as ``:doc:`/sketches/parrot``` or 
-by relative name as ``:doc:`parrot```.
-
 Index files
-===========
+-----------
 
 Instead of using the ``contents`` directive to show a table of its own contents, 
 the index file uses the ``toctree`` directive to show a table of other files. 
@@ -556,7 +528,8 @@ All files in the archive should be reachable from the toctrees in the index. Fil
 can also contain toctrees of their own, which can lead to other files not referenced 
 directly by the index. Toctrees may be hidden, and one of the three toctrees in the 
 index of this repository is hidden. Please read this code block showing the entire rst 
-source code for the index file, then go look at the index file, then return here.
+source code for the index file, then go look at the :doc:`index page<../index>`, then 
+return here.
 
 .. code-block:: rst
 
@@ -573,16 +546,16 @@ source code for the index file, then go look at the index file, then return here
   Instead of using the table of contents below, please start by going directly to the :doc:`directory/sphinx`.
 
 
-  Intro
-  -----
+  First Section
+  -------------
 
-  Intro goes here.
+  First text.
 
 
-  Getting Started
-  ---------------
+  Second Section
+  --------------
 
-  How to get started.
+  Second text.
 
 
   First Set of Documents
@@ -607,7 +580,7 @@ source code for the index file, then go look at the index file, then return here
 
   .. toctree::
      :hidden:
-   
+     
      dummyc
      dummyd
 
@@ -620,7 +593,7 @@ source code for the index file, then go look at the index file, then return here
 
 
 Images
-======
+------
 
 This is allowed in rst in general, but produces a 'nonlocal image' warning in sphinx:
 
@@ -640,7 +613,7 @@ probably best avoided anyway. Here's a local image.
 .. image:: Puppy_2.jpg
 
 Notes
-=====
+-----
 
 .. code-block:: rst
 
@@ -659,7 +632,7 @@ Notes
    - It includes this bullet list.
 
 YouTube videos (and other raw html in rst files)
-================================================
+------------------------------------------------
 
 On YouTube you can click "share" and then "embed", and it will show iframe code like this.
 
@@ -675,7 +648,7 @@ On YouTube you can click "share" and then "embed", and it will show iframe code 
 
 
 References
-==========
+----------
 
 intro to sphinx http://docs.writethedocs.org/tools/sphinx/
 
