@@ -618,6 +618,19 @@ probably best avoided anyway. Here's a local image.
 
 .. image:: Puppy_2.jpg
 
+
+Downloadable files
+------------------
+
+Files marked for download will be copied from their place in the source directory 
+to build/html/_downloads , and duplicate filenames are handled.
+
+.. code-block:: rst
+
+   See :download:`this example script <../example.py>`.
+
+See :download:`this example script <../example.py>`.
+
 Notes
 -----
 
@@ -663,6 +676,8 @@ rst primer http://sphinx-doc.org/rest.html
 first steps w sphinx http://sphinx-doc.org/tutorial.html
 
 links http://sphinx-doc.org/markup/inline.html#ref-role
+
+downloads http://sphinx-doc.org/markup/inline.html#referencing-downloadable-files
 
 http://reinout.vanrees.org/weblog/2009/10/30/restructured-text-cheat-sheet.html
 
