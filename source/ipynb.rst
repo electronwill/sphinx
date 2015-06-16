@@ -3,8 +3,9 @@ IPython Notebook
 
 To get ipython notebook files working:
 
--Install conda.
--this:
+* Install conda.
+
+* This:
 
 .. code-block:: bash
 
