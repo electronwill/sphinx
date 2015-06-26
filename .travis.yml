@@ -10,6 +10,7 @@ before_install:
   - conda install conda-build;
   - conda create -q -n build-environment -c asmeurer conda-docs-deps;
   - source activate build-environment
+  - conda update --all
 
 script:
   - make html
