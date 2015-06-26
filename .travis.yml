@@ -1,5 +1,5 @@
 before_install:
-  - wget http://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh;
+  - wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh;
   - bash ~/miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
@@ -8,7 +8,7 @@ before_install:
   - conda update -q conda
   - conda info -a
   - conda install conda-build;
-  - conda create -q -n build-environment -c asmeurer conda-docs-deps;
+  - conda create -q -n build-environment -c asmeurer conda-docs-deps python=3;
   - source activate build-environment
   - conda update --all
 
