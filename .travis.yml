@@ -11,7 +11,7 @@ before_install:
   - conda create -q -n build-environment -c asmeurer conda-docs-deps python=3;
   - source activate build-environment
   - conda update --all
-  - echo "2015-06-26 16:54"
+  - sphinx-build --version
 
 script:
   - make html
