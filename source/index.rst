@@ -22,7 +22,6 @@ Second Section
 
 Second text.
 
-
 First Set of Documents
 ----------------------
 
@@ -57,4 +56,3 @@ Indices and tables
 
 * :ref:`genindex`
 * :ref:`search`
-

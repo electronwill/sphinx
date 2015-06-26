@@ -265,6 +265,24 @@ bash and python.
   for i in range(10):
       print(i)
 
+Captions
+^^^^^^^^
+
+Now in Sphinx 1.3, captions can be added to code blocks as well:
+
+.. code-block:: rst
+
+  .. code-block:: python
+     :caption: this.py
+     :name: this-py
+
+     print('Explicit is better than implicit.')
+
+.. code-block:: python
+   :caption: this.py
+   :name: this-py
+
+   print('Explicit is better than implicit.')
 
 Tables
 ------
@@ -682,4 +700,3 @@ downloads http://sphinx-doc.org/markup/inline.html#referencing-downloadable-file
 http://reinout.vanrees.org/weblog/2009/10/30/restructured-text-cheat-sheet.html
 
 RST cheat sheet http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
-
