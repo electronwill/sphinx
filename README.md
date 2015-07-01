@@ -93,7 +93,7 @@ Build the html files from the rst file sources:
 
 Now open ~/ghw/sphinx/build/html/index.html in a browser. As well as the browser's "file/open file" option, you can use ``open build/html/index.html`` on OS X or ``firefox build/html/index.html`` on Linux. Use the link on the index page to look at the guest book. Then you can close that browser tab.
 
-Now choose your favorite editor, such as gedit, Atom, or nano, and use it to open the file ``source/guest.rst``. This is a simple rst file, with little formatting, and it should just display the text almost the same way a text editor does. Add your name and the date, and save and close the file.
+Now choose your favorite editor. nano is a cross platform editor that runs in the terminal, and there are also many good graphical editors such as gedit on Linux and Atom on OS X. Use your editor to open the file ``source/guest.rst``. This is a simple rst file, with little formatting, and it should just display the text almost the same way a text editor does. Add your name and the date, and save and close the file.
 
 Now open index.html in a browser again and look at the guest book to see that it hasn't changed. The rst file is different, but to make the html different, we will need to rebuild it. Close the browser tab.
 
@@ -105,7 +105,7 @@ Now open index.html in a browser again and look at the guest book. You should se
 
 Sometimes `make html` will produce errors or warnings. If so, edit the rst files again to fix the problems, then ``make clean; make html`` again. Repeat this until there are no errors or warnings, and you like the way the local html files look, and then proceed.
 
-Use ``git status`` to see what git's view of the current files are:
+Use ``git status`` to see git's view of the current files:
 
     git status
 
@@ -135,20 +135,20 @@ In a browser, go to https://github.com/electronwill/sphinx . You should see a me
 
 They may ask you to make further changes before they approve the pull request, and you can do this by editing the files again, using ``git add``, ``git commit``, and ``git push`` again, and leaving another comment asking them to review the changes again. These changes will appear on the same pull request, so you don't need to make a new pull request.
 
-Once the changes are merged, go back to the terminal window, go back to the master branch, use ``git pull`` to pull the latest changes in the GitHub repository down to our local copy, and delete the sign-guest-book branch.
+Once the changes are merged, go back to the terminal window, go back to the master branch, use ``git pull`` to pull the latest changes in the GitHub repository down to our local copy, and delete the sign-guest-book branch:
 
-    git status
+    git branch
     git checkout master
-    git status
+    git branch
     git pull
     git branch -d sign-guest-book
-    git status
+    git branch
 
 You can view the history of a file with ``git log``:
 
     git log source/guest.rst
 
-When you're done, deactivate the conda environment and return to the home directory.
+When you're done, deactivate the conda environment and return to the home directory:
 
     source deactivate
     cd
@@ -173,7 +173,7 @@ Check the files in a browser to confirm the changes.
 
 Repeat the edit, make, and open steps as needed until your rst files build with no errors or warnings and you like the way they look.
 
-Add the files to be put into the next commit, and repeat the ``git add`` command for each file you created or edited, until ``git status`` no longer shows untracked changes. Create a commit, with a commit message. And push the files to GitHub.
+Add the files to be put into the next commit, and repeat the ``git add`` command for each file you created or edited, until ``git status`` no longer shows untracked changes. Create a commit, with a commit message. And push the files to GitHub:
 
     git add source/index.rst
     git commit
