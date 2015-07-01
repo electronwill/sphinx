@@ -42,7 +42,9 @@ Make a GitHub working directory, which we will somewhat arbitrarily call 'ghw', 
     mkdir ghw
     cd ghw
 
-Go to https://github.com/electronwill/sphinx . On the right there's a box that says "HTTPS clone URL". Click the "SSH" link underneath it so it shows the "SSH clone URL" instead. Copy that URL, such as git@github.com:electronwill/sphinx.git . Next, "clone" the repository at the URL https://github.com/electronwill/sphinx . Cloning the repository creates a copy of it on your local computer, where you can make edits before publishing them to the repository on GitHub.
+Go to https://github.com/electronwill/sphinx . On the right there's a box that says "HTTPS clone URL". Click the "SSH" link underneath it so it shows the "SSH clone URL" instead. Copy that URL, such as git@github.com:electronwill/sphinx.git .
+
+Next, "clone" the repository to create a copy of it on your local computer, where you can make edits before publishing them to the repository on GitHub:
 
     git clone git@github.com:electronwill/sphinx.git
 
