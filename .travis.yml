@@ -7,8 +7,9 @@ before_install:
   - conda config --add channels asmeurer
   - conda update -q conda
   - conda info -a
-  - conda install conda-build;
-  - conda create -q -n build-environment -c asmeurer conda-docs-deps python=3;
+  - conda install conda-build pycrypto
+  - conda update --all
+  - conda create -q -n build-environment -c asmeurer conda-docs-deps python=3
   - source activate build-environment
   - conda update --all
   - conda list
